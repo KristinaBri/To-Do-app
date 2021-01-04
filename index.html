@@ -30,10 +30,18 @@
       <h1>My To-Do List</h1>
     </header>
     <form>
-      <input type="text" class="todo-description" />
+      <input type="text" class="todo-description" maxlength="160" required />
       <button class="add-btn" type="submit">
         <i class="fas fa-plus-square"></i>
       </button>
+
+      <div class="select">
+        <select name="todo" class="filter-todo">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Not completed</option>
+        </select>
+      </div>
     </form>
 
     <div class="todo-container">
