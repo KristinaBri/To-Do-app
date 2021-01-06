@@ -12,7 +12,7 @@ body {
     rgba(238, 174, 202, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   );
-  color: white;
+  color: #744359;
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
 }
@@ -76,7 +76,7 @@ form button:hover {
 
 .delete-btn,
 .completed-btn {
-  background-color: #744359;
+  background-color: #912f5b;
   color: white;
   border: none;
   padding: 1rem;
@@ -126,6 +126,7 @@ select {
   content: "\25BC";
   position: absolute;
   background-color: #744359;
+  color: white;
   top: 0;
   right: 0;
   padding: 1.2rem;
@@ -136,4 +137,20 @@ select {
 .select:hover::after {
   background-color: white;
   color: #744359;
+}
+
+#todo-deadline {
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+
+li {
+  font-weight: bold;
+}
+
+span {
+  color: #744359;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  padding: 0.2rem;
 }

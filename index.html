@@ -30,13 +30,27 @@
       <h1>My To-Do List</h1>
     </header>
     <form>
-      <input type="text" class="todo-description" maxlength="160" required />
-      <button class="add-btn" type="submit">
+      <input
+        type="datetime-local"
+        id="todo-deadline"
+        name="todo-deadline"
+        value=""
+        min="2021-01-07T00:00"
+        max="2021-12-31T00:00"
+      />
+
+      <input
+        type="text"
+        class="todo-description"
+        maxlength="160"
+        placeholder="Type your ToDo..."
+      />
+      <button class="add-btn" type="submit" onclick="checkValidation()">
         <i class="fas fa-plus-square"></i>
       </button>
 
       <div class="select">
-        <select name="todo" class="filter-todo">
+        <select name="todo" class="sort-todo">
           <option value="all">All</option>
           <option value="completed">Completed</option>
           <option value="uncompleted">Not completed</option>
