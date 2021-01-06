@@ -12,8 +12,6 @@ sortingOption.addEventListener("click", sortTodo);
 
 // Functions
 
-checkValidation();
-
 // 1.Add ToDo function
 function addTodo(e) {
   // Prevent form from submiting
@@ -71,10 +69,10 @@ function deleteTodo(e) {
   if (item.classList[0] === "completed-btn") {
     const todo = item.parentElement;
     todo.classList.toggle("completedItem");
-    console.log(todo);
   }
 }
 
+// Sorting ToDo's
 function sortTodo(e) {
   const todos = todoList.childNodes;
   todos.forEach(function (todo) {

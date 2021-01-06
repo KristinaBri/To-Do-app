@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
 
     <!-- Google Fonts -->
     <link
@@ -37,6 +36,7 @@
         value=""
         min="2021-01-07T00:00"
         max="2021-12-31T00:00"
+        title="Select deadline"
       />
 
       <input
@@ -44,8 +44,9 @@
         class="todo-description"
         maxlength="160"
         placeholder="Type your ToDo..."
+        required
       />
-      <button class="add-btn" type="submit" onclick="checkValidation()">
+      <button class="add-btn" type="submit" title="Add">
         <i class="fas fa-plus-square"></i>
       </button>
 
