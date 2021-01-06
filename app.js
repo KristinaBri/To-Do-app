@@ -24,6 +24,11 @@ function addTodo(e) {
   // Create list item
   const newTodo = document.createElement("li");
   newTodo.innerText = todoInput.value;
+
+  // Session storage
+  saveSessionTodos(todoInput.value);
+  // ..............
+
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
 
@@ -96,4 +101,16 @@ function sortTodo(e) {
         break;
     }
   });
+}
+
+// Save to Session Storage
+function saveSessionTodos(todo) {
+  let todos;
+  if (sessionStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(sessionStorage.getItem("todos"));
+  }
+  todos.push(todo);
+  sessionStorage.setItem("todos", JSON.stringify(todos));
 }
